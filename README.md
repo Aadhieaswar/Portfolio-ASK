@@ -1,6 +1,6 @@
 # Aadhieaswar's Portfolio Website
 
-includes:
+### Includes:
 - Bio
 - projects  
 - project preview
