@@ -1,0 +1,7 @@
+
+# to ignore swp files created by vim
+
+*.swp
+*.swo
+*.*wp
+*~
