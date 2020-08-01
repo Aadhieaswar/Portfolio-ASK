@@ -4,6 +4,138 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* SVG ANIMATION */
+.svg-container {
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes fillW {
+    to {
+        fill: white;
+    }
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 5px;
+    animation: fillW 4s forwards;
+}
+
+@keyframes fillCont {
+    to {
+        fill: white;
+    }
+}
+
+#logo mask {
+    animation: fillCont 3s ease 1s forwards;
+}
+
+#logo path {
+    stroke-linecap: square;
+}
+
+@keyframes lineAnim {
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+#logo > path:nth-child(2), path:nth-child(3), path:nth-child(8), path:nth-child(11) {
+   stroke-dasharray: 218px;
+   stroke-dashoffset: 218px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(4) {
+   stroke-dasharray: 254px;
+   stroke-dashoffset: 254px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(5) {
+   stroke-dasharray: 237px;
+   stroke-dashoffset: 237px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(6), path:nth-child(22) {
+   stroke-dasharray: 100.8px;
+   stroke-dashoffset: 100.8px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(7) {
+   stroke-dasharray: 206.2px;
+   stroke-dashoffset: 206.2px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(9) {
+   stroke-dasharray: 219.5px;
+   stroke-dashoffset: 219.5px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(10) {
+   stroke-dasharray: 356.1px;
+   stroke-dashoffset: 356.1px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(12), path:nth-child(17) {
+   stroke-dasharray: 244px;
+   stroke-dashoffset: 244px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(13) {
+   stroke-dasharray: 41.34px;
+   stroke-dashoffset: 41.34px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(14) {
+   stroke-dasharray: 219.5px;
+   stroke-dashoffset: 219.5px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(15) {
+   stroke-dasharray: 199.9px;
+   stroke-dashoffset: 199.9px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(16), path:nth-child(20), path:nth-child(23) {
+   stroke-dasharray: 251.5px;
+   stroke-dashoffset: 251.5px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(18) {
+   stroke-dasharray: 149.6px;
+   stroke-dashoffset: 149.6px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(19) {
+   stroke-dasharray: 171.1px;
+   stroke-dashoffset: 171.1px;
+   animation: lineAnim 3s ease forwards;
+}
+
+#logo > path:nth-child(21) {
+   stroke-dasharray: 132.1px;
+   stroke-dashoffset: 132.1px;
+   animation: lineAnim 3s ease forwards;
+}
+/* SVG ANIMATION END */
+
 html {
     height: 100%;
 }
@@ -12,7 +144,7 @@ code {
     background-color: #f1f1f1;
     border-radius: 2px;
     padding: 3px;
-    color: black;
+    color: #1d2124;
     font-family: 'Fira Code';
 }
 
@@ -47,6 +179,12 @@ body {
     overflow-y: auto;
 }
 
+.divider {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+}
+
 .shift {
     margin-top: 100px;
     margin-bottom: 160px;
@@ -74,7 +212,7 @@ body {
 .content {
     margin-top: 30px;
     font-size: 21px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Bree Serif', serif;
 }
 
 .bio-container {
@@ -90,7 +228,7 @@ body {
 .bio li {
     font-size: 22px;
     text-align: left;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Bree Serif', serif;
 }
 
 .bio li span {
@@ -107,10 +245,10 @@ body {
 .My-Projects h2 {
     text-align: center;
     font-family: 'Fira Code', monospace;
-    color: #141414;
+    color: rgb(20, 119, 206);
     width: 95%;
     margin: 0 auto;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid rgb(20, 119, 206);
     padding: 10px;
 }
 
@@ -127,23 +265,73 @@ body {
     padding: 20px;
     margin-left: 30px;
     margin-top: 20px;
-    background-color: #f1f1f1;
+    background-color: #1d2124;
     margin-bottom: 20px;
+    border: 5px solid rgb(20, 119, 206);
+    color: white;
 }
 
 @keyframes enlarge {
     from {
         transform: scale(1.00);
+        border-color: white;
     }
     to {
         transform: scale(1.05);
+        border-color: rgb(20, 119, 206);
     }
 }
 
+.contact-me {
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(0, 153, 153);
+    color: #dddddd;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.icon {
+    font-size: 30px;
+    color: white;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.25);
+    color: lightblue;
+}
+
+.icon-container {
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-me div {
+    margin-top: 20px;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Bree Serif', serif;
+}
+
+.contact-me h1 {
+    width: 95%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+    color: #dddddd;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: 'Bree Serif', serif;
+}
+
 .card:hover {
-    animation: enlarge;
-    animation-duration: 500ms;
-    animation-fill-mode: forwards;
+    animation: enlarge 500ms ease forwards;
 }
 
 body main {
@@ -167,6 +355,6 @@ footer {
     width: 100%;
 }
 
-footer>h4 {
+footer > h4 {
     padding-top: 20px;
 }
