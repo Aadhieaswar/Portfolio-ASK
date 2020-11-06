@@ -1,7 +1,19 @@
+:root {
+  --primary: #3b8bEb;
+  --secondary: #2B7A78;
+  --dull: #3AAFA9;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --dark: #1d2124;
+  --light: #F1F1F1;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
 }
 
 /* SVG ANIMATION */
@@ -144,37 +156,27 @@ code {
   background-color: #f1f1f1;
   border-radius: 2px;
   padding: 3px;
-  color: #1d2124;
+  color: var(--dark);
   font-family: 'Fira Code';
 }
 
 strong {
-  font-style: italic;
-}
-
-.navbar {
-  height: 100px;
-  background-color: rgb(20, 119, 206);
+  padding: 2px;
+  border-bottom: 1px solid var(--light);
+  /* color: var(--light); */
   color: white;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: -100px;
+  letter-spacing: 1px;
 }
 
-.navbar h2 {
-  font-family: Candara;
-  font-size: 50px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  width: 95%;
-  margin: 0 auto;
-  border-bottom: 1px solid white;
-  padding: 10px;
+strong:hover {
+  cursor: default;
+  transition: all 0.3s ease-in;
+  border-color: var(--primary);
 }
 
 body {
-  background-color: rgb(20, 119, 206);
+  /* background-color: rgb(20, 119, 206); */
+  background-color: var(--primary);
   height: 100%;
   overflow-y: auto;
 }
@@ -182,7 +184,7 @@ body {
 .divider {
   width: 90%;
   margin: 0 auto;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--light);
 }
 
 .shift {
@@ -196,33 +198,46 @@ body {
   color: white;
   margin-top: 120px;
   border-radius: 5px;
-  height: 450px;
+  min-height: 450px;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .about-me h1 {
   color: rgb(158, 207, 247);
   font-family: 'Lato', sans-serif;
-  width: 20%;
+  width: max-content;
   margin: 0 auto;
-  padding: 10px;
+  border-bottom: 2px solid var(--light);
+  padding: 5px;
 }
+
+.para {
+  display: block;
+  height: max-content;
+  padding: 10px;
+  position: relative;
+}
+
 
 .content {
   margin-top: 30px;
   font-size: 21px;
   font-family: 'Bree Serif', serif;
+  margin-bottom: 100px;
 }
 
 .bio-container {
   justify-content: center;
   display: flex;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .bio {
   list-style-type: none;
-  margin-top: 30px;
 }
 
 .bio li {
@@ -232,7 +247,8 @@ body {
 }
 
 .bio li span {
-  color: #69d6f1;
+  /* color: #69d6f1; */
+  color: rgb(158, 207, 247);
   font-weight: bold;
 }
 
@@ -240,68 +256,90 @@ body {
   width: 95%;
   margin: 0 auto;
   background-color: white;
+  margin-top: 10px;
+  border-radius: 3px;
 }
 
 .My-Projects h2 {
   text-align: center;
   font-family: 'Fira Code', monospace;
-  color: rgb(20, 119, 206);
+  color: var(--primary);
   width: 95%;
   margin: 0 auto;
-  border-bottom: 1px solid rgb(20, 119, 206);
+  border-bottom: 1px solid var(--primary);
   padding: 10px;
+  margin-bottom: 10px;
+}
+
+.small-heading {
+  display: none;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  padding: 10px;
+  width: max-content;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .My-Projects ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .card {
-  height: 400px;
-  width: 300px;
-  padding: 20px;
-  margin-left: 30px;
-  margin-top: 20px;
-  background-color: #1d2124;
+  width: 400px;
+  height: 500px;
+  margin: 10px;
+  background-color: var(--light);
   margin-bottom: 20px;
-  border: 5px solid rgb(20, 119, 206);
-  color: white;
+  border: 2px solid var(--gray-dark);
+  color: var(--primary);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes enlarge {
-  from {
-    transform: scale(1.00);
-    border-color: white;
-  }
-  to {
-    transform: scale(1.05);
-    border-color: rgb(20, 119, 206);
-  }
+.card:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.02);
+}
+
+.card h4 {
+  padding: 10px;
+  font-size: 20px;
+  background-color: var(--gray-dark);
+  border-bottom: 2px solid var(--gray-dark);
+  margin-bottom: 10px;
+}
+
+.card img {
+  max-width: 95%;
 }
 
 .contact-me {
   width: 90%;
   margin: 0 auto;
-  background-color: rgb(0, 153, 153);
-  color: #dddddd;
+  background-color: var(--dull);
+  color: white;
   margin-top: 20px;
   justify-content: center;
   text-align: center;
+  border-radius: 3px;
+  overflow-x: auto;
 }
 
 .icon {
   font-size: 30px;
-  color: white;
+  color: var(--dark);
   padding: 5px;
   transition: all 0.3s ease;
 }
 
 .icon:hover {
   transform: scale(1.25);
-  color: lightblue;
+  color: var(--gray-dark);
 }
 
 .icon-container {
@@ -323,15 +361,11 @@ body {
 .contact-me h1 {
   width: 95%;
   margin: 0 auto;
-  border-bottom: 1px solid white;
-  color: #dddddd;
+  border-bottom: 1px solid var(--gray);
+  color: var(--dark);
   padding-top: 20px;
   padding-bottom: 10px;
   font-family: 'Bree Serif', serif;
-}
-
-.card:hover {
-  animation: enlarge 500ms ease forwards;
 }
 
 body main {
@@ -342,14 +376,29 @@ body main {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.sub-head {
+  font-weight: bold;
+  color: var(--gray-dark);
+  font-family: 'Bree Serif', sans-serif;
+  letter-spacing: 1px;
+}
+
+.divider-20 {
+  display: block;
+  height: 1px;
+  background-color: var(--gray);
+  width: 20%;
+  margin: 0 auto;
+}
+
 footer {
-  box-shadow: -1px -5px 9px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -5px 9px -2px rgba(0, 0, 0, 0.3);
   font-size: 20px;
   margin-top: -100px;
   text-align: center;
   justify-content: center;
   color: white;
-  background-color: #1d2124;
+  background-color: var(--dark);
   min-height: 100px;
   border-top: 5px solid white;
   width: 100%;
@@ -357,4 +406,30 @@ footer {
 
 footer > h4 {
   padding-top: 20px;
+}
+
+@media screen and (max-width: 570px) {
+  .svg-container {
+    display: none;
+  }
+
+  .small-heading {
+    display: block;
+  }
+
+  .divider {
+    margin-bottom: -80px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    min-width: 310px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .card {
+    min-width: 200px;
+  }
 }
