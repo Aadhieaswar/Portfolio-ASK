@@ -288,6 +288,32 @@ body {
   justify-content: space-around;
 }
 
+hr {
+  width: 95%;
+  margin: 0 auto;
+  height: 1px;
+  color: var(--gray);
+}
+
+.tags {
+  padding: 10px;
+}
+
+.tags li {
+  color: white;
+  background-color: var(--primary);
+  padding: 3px;
+  border-radius: 500px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 2px;
+}
+
+.tags li:hover {
+  color: var(--light);
+  cursor: default;
+}
+
 .card {
   width: 400px;
   height: 500px;
@@ -334,6 +360,7 @@ body {
 }
 
 .repo-link {
+  display: inline-block;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
