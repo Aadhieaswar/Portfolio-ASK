@@ -6,6 +6,7 @@
   --gray-dark: #343a40;
   --dark: #1d2124;
   --light: #F1F1F1;
+  --blue: rgb(158, 207, 247);
 }
 
 * {
@@ -250,23 +251,24 @@ body {
 
 .bio li span {
   /* color: #69d6f1; */
-  color: rgb(158, 207, 247);
+  color: var(--blue);
   font-weight: bold;
 }
 
 .card-2 {
   width: 400px;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 10px;
-  border: 2px solid var(--gray);
+  border: 2px solid var(--blue);
 }
 
 .card-2 > h4 {
   padding: 10px;
-  color: var(--gray);
+  color: var(--gray-dark);
   font-family: 'Bree Serif', serif;
-  border-bottom: 2px solid var(--gray);
+  border-bottom: 2px solid var(--blue);
+  background-color: var(--blue);
   margin-bottom: 10px;
 }
 
