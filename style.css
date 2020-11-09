@@ -224,8 +224,10 @@ body {
 .content {
   margin-top: 30px;
   font-size: 21px;
-  font-family: 'Bree Serif', serif;
   margin-bottom: 100px;
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .bio-container {
@@ -250,6 +252,39 @@ body {
   /* color: #69d6f1; */
   color: rgb(158, 207, 247);
   font-weight: bold;
+}
+
+.card-2 {
+  width: 400px;
+  background-color: white;
+  border-radius: 3px;
+  margin: 10px;
+  border: 2px solid var(--gray);
+}
+
+.card-2 > h4 {
+  padding: 10px;
+  color: var(--gray);
+  font-family: 'Bree Serif', serif;
+  border-bottom: 2px solid var(--gray);
+  margin-bottom: 10px;
+}
+
+.card-2 > p {
+  color: var(--gray);
+  font-size: 20px;
+  font-family: 'Bree Serif', serif;
+  padding: 5px;
+}
+
+.logos-container {
+  align-items: center;
+  color: var(--gray);
+  font-size: 18px;
+}
+
+.lang-img {
+  margin: 10px;
 }
 
 .My-Projects {
@@ -329,7 +364,6 @@ hr {
 
 .card:hover {
   transition: all 0.15s ease-in-out;
-  /* transform: scale(1.02); */
   background-color: var(--gray-dark);
 }
 
