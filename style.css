@@ -313,7 +313,7 @@ body {
 
 .card img:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .card h4 {
@@ -339,7 +339,7 @@ body {
   border-radius: 3px;
   background-color: var(--dull);
   color: var(--light);
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .repo-link:hover {
@@ -357,12 +357,12 @@ body {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .close-btn {
-  font-size: 24px !important;
+  font-size: 30px !important;
   border: none;
   display: inline-block;
   padding: 8px 16px;
@@ -389,8 +389,7 @@ body {
   position: relative;
   padding: 0;
   outline: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
   text-align: center;
 }
 
@@ -496,6 +495,14 @@ footer > h4 {
   padding-top: 20px;
 }
 
+/* media queries */
+@media screen and (max-width: 650px) {
+  .img-container {
+    margin: 0 10px;
+    width: auto !important;
+  }
+}
+
 @media screen and (max-width: 570px) {
   .svg-container {
     display: none;
@@ -507,10 +514,6 @@ footer > h4 {
 
   .divider {
     margin-bottom: -80px;
-  }
-
-  .img-container {
-    width: auto !important;
   }
 }
 
