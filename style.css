@@ -17,16 +17,50 @@
   font-family: 'Lato', sans-serif;
 }
 
-/* SVG ANIMATION */
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ver-sep {
+  border-left: 1px solid var(--primary);
+  height: 90%;
+}
+
+nav .name {
+  align-self: center;
+  font-size: 25px;
+}
+
+.name > a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.name > a:hover, .link-right:hover {
+  transition: all 0.15s ease;
+  color: var(--blue);
+}
+
+.link-right {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 20px;
+}
+
 .svg-container {
   height: 100vh;
   width: 100%;
-}
-
-@keyframes fillW {
-  to {
-    fill: white;
-  }
 }
 
 #logo {
@@ -38,146 +72,36 @@
   animation: fillW 4s forwards;
 }
 
-@keyframes fillCont {
-  to {
-    fill: white;
-  }
-}
-
-#logo mask {
-  animation: fillCont 3s ease 1s forwards;
-}
-
-#logo path {
-  stroke-linecap: square;
-}
-
-@keyframes lineAnim {
-  to {
-    stroke-dashoffset: 0px;
-  }
-}
-
-#logo > path:nth-child(2), path:nth-child(3), path:nth-child(8), path:nth-child(11) {
-  stroke-dasharray: 218px;
-  stroke-dashoffset: 218px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(4) {
-  stroke-dasharray: 254px;
-  stroke-dashoffset: 254px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(5) {
-  stroke-dasharray: 237px;
-  stroke-dashoffset: 237px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(6), path:nth-child(22) {
-  stroke-dasharray: 100.8px;
-  stroke-dashoffset: 100.8px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(7) {
-  stroke-dasharray: 206.2px;
-  stroke-dashoffset: 206.2px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(9) {
-  stroke-dasharray: 219.5px;
-  stroke-dashoffset: 219.5px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(10) {
-  stroke-dasharray: 356.1px;
-  stroke-dashoffset: 356.1px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(12), path:nth-child(17) {
-  stroke-dasharray: 244px;
-  stroke-dashoffset: 244px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(13) {
-  stroke-dasharray: 41.34px;
-  stroke-dashoffset: 41.34px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(14) {
-  stroke-dasharray: 219.5px;
-  stroke-dashoffset: 219.5px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(15) {
-  stroke-dasharray: 199.9px;
-  stroke-dashoffset: 199.9px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(16), path:nth-child(20), path:nth-child(23) {
-  stroke-dasharray: 251.5px;
-  stroke-dashoffset: 251.5px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(18) {
-  stroke-dasharray: 149.6px;
-  stroke-dashoffset: 149.6px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(19) {
-  stroke-dasharray: 171.1px;
-  stroke-dashoffset: 171.1px;
-  animation: lineAnim 3s ease forwards;
-}
-
-#logo > path:nth-child(21) {
-  stroke-dasharray: 132.1px;
-  stroke-dashoffset: 132.1px;
-  animation: lineAnim 3s ease forwards;
-}
-/* SVG ANIMATION END */
-
-html {
-  height: 100%;
-  scroll-behavior: smooth;
-}
-
-code {
-  background-color: #f1f1f1;
-  border-radius: 2px;
-  padding: 3px;
-  color: var(--dark);
-  font-family: 'Fira Code';
-}
-
-strong {
-  padding: 2px;
-  border-bottom: 1px solid var(--light);
-  /* color: var(--light); */
+.intro-content {
   color: white;
-  letter-spacing: 1px;
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-strong:hover {
-  cursor: default;
-  transition: all 0.3s ease-in;
-  border-color: var(--primary);
+.contact-link {
+  display: block;
+  text-decoration: none;
+  background: var(--blue);
+  padding: 0.5rem;;
+  color: white;
+  border-radius: 0.5rem;
+  border: 2px solid var(--blue);
+  width: max-content;
+  margin: 0 auto;
+}
+
+.contact-link:hover {
+  transition: all 0.15s ease;
+  color: white;
+  border-color: white;
+  transform: scale(1.05);
+  background: transparent;
 }
 
 body {
-  /* background-color: rgb(20, 119, 206); */
   background-color: var(--primary);
   height: 100%;
   overflow-y: auto;
@@ -489,7 +413,7 @@ hr {
 
 .e-link:hover {
   transition: all 0.3s ease;
-  color: var(--gray);
+  color: var(--blue);
 }
 
 .icon {
