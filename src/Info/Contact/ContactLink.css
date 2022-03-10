@@ -1,0 +1,51 @@
+.exp-btn {
+  display: block;
+  height: 60px;
+  background: var(--primary);
+  border-radius: 60px;
+  color: var(--blue);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  margin: 10px auto;
+  width: 300px;
+}
+
+.exp-btn:hover {
+  transform: scale(1.05);
+}
+
+.exp-btn:hover .e-link-1 {
+  color: white;
+}
+
+.icon-1 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(50%, -50%);
+}
+
+.e-link-1 {
+  position: absolute;
+  word-break: none;
+  top: 45%;
+  left: 60px;
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: var(--blue);
+  white-space: nowrap;
+  font-family: 'Bree Serif', serif;
+}
+
+.e-2 {
+  width: 380px;
+}
+
+.e-3 {
+  width: 165px;
+}
+
+.e-4 {
+  width: 185px;
+}

@@ -1,6 +1,5 @@
 
 # to ignore swp files created by vim
-
 *.swp
 *.swo
 *.*wp
@@ -9,3 +8,9 @@
 # vim local config folder
 .vim
 .vim/*
+
+# node modules
+node_modules/*
+
+# build
+build/*

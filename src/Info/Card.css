@@ -1,0 +1,22 @@
+.card-2 {
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+  border: 2px solid var(--blue);
+}
+
+.card-2 > h4 {
+  padding: 10px;
+  color: white;
+  border-bottom: 2px solid var(--blue);
+  background-color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.card-2 > div {
+  color: var(--gray);
+  font-size: 20px;
+  font-family: 'Bree Serif', serif;
+  padding: 5px;
+}

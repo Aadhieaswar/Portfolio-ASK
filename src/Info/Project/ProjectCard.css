@@ -1,0 +1,73 @@
+.tags {
+  padding: 10px;
+}
+
+.tags li {
+  color: var(--gray-dark);
+  background-color: var(--blue);
+  padding: 2px;
+  border-radius: 500px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 2px;
+}
+
+.tags li:hover {
+  transition: all 0.1s ease-out;
+  transform: scale(1.05);
+  cursor: default;
+}
+
+.card {
+  width: 400px;
+  height: 520px;
+  margin: 10px;
+  background-color: var(--light);
+  margin-bottom: 20px;
+  border: 2px solid var(--primary);
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card hr {
+  border: none;
+  background: var(--gray);
+}
+
+.project-image {
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.card h4 {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--gray-dark);
+  padding: 10px;
+}
+
+.repo-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px;
+  width: max-content;
+  border-radius: 3px;
+  background-color: var(--dull);
+  color: var(--light);
+  margin: 5px auto;
+}
+
+.repo-link:hover {
+  transition: all 0.15s ease-in;
+  transform: scale(1.05);
+  color: white;
+  background-color: var(--secondary);
+}

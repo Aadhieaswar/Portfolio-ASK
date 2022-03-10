@@ -1,0 +1,25 @@
+.My-Projects {
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.My-Projects h2 {
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  color: var(--primary);
+  width: 95%;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--primary);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.My-Projects ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

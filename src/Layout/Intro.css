@@ -1,0 +1,51 @@
+.intro-container {
+  height: 100vh;
+}
+
+#logo {
+  position: absolute;
+  /* width: 496px; */
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+  animation: fillW 4s forwards;
+}
+
+.intro-content {
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contact-link {
+  display: block;
+  text-decoration: none;
+  background: var(--cyan);
+  padding: 0.5rem;;
+  color: var(--primary);
+  border-radius: 0.5rem;
+  border: 2px solid var(--cyan);
+  width: max-content;
+  margin: 0 auto;
+}
+
+.contact-link:hover {
+  transition: all 0.15s ease;
+  color: var(--cyan);
+  border-color: var(--cyan);
+  transform: scale(1.05);
+  background: transparent;
+  cursor: pointer;
+}
+
+.fade-out {
+  opacity:0;
+  width:0;
+  height:0;
+  transition: width 0.5s 0.5s, height 0.5s 0.5s, opacity 0.5s;
+}

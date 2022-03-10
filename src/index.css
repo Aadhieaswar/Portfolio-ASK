@@ -1,0 +1,61 @@
+:root {
+  --primary: #3b8bEb;
+  --secondary: #2B7A78;
+  --dull: #3AAFA9;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --dark: #1d2124;
+  --light: #F1F1F1;
+  --blue: #9ECFF7;
+  --cyan: #00FFE0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+code {
+  background-color: #f1f1f1;
+  border-radius: 2px;
+  padding: 3px;
+  color: var(--dark);
+  font-family: 'Fira Code';
+}
+
+strong {
+  padding: 2px;
+  border-bottom: 1px solid var(--light);
+  color: white;
+  letter-spacing: 1px;
+}
+
+strong:hover {
+  cursor: default;
+  transition: all 0.3s ease-in;
+  border-color: var(--primary);
+}
+
+body {
+  background-color: var(--primary) !important;
+  height: 100%;
+  overflow-y: auto;
+}
+
+hr {
+  width: 95%;
+  margin: 0 auto;
+  height: 1px;
+  color: var(--gray);
+}
+
+.box-shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
