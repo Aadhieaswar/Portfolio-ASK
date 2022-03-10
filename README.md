@@ -11,4 +11,5 @@
 
 ### Special Mentions
 - Amazing image effects from the `antd` node module
+- `react-scroll` for that super smooth scroll through the web app
 - Super useful `react-icons` module which has all the icons that you will ever need
