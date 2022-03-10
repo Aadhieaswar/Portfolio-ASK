@@ -1,5 +1,5 @@
 import './App.css';
-import 'antd/dist/antd.css'; // antd css stylesheet
+import 'antd/dist/antd.min.css'; // antd css stylesheet
 
 // import components
 import Navbar from './Navbar/Navbar';
