@@ -5,3 +5,7 @@
 *.swo
 *.*wp
 *~
+
+# vim local config folder
+.vim
+.vim/*

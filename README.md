@@ -2,6 +2,6 @@
 
 ### Includes:
 - Bio
-- projects  
+- projects
 - project preview
 - project links to git hub repos
