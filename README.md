@@ -10,6 +10,6 @@
 - My resume
 
 ### Special Mentions
-- Amazing image effects from the `antd`
+- Amazing image preview and hover effects from `antd`
 - `react-scroll` for that super smooth scroll through the web app
 - Super useful `react-icons` module which has all the icons that you will ever need
