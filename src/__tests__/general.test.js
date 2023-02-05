@@ -1,8 +1,10 @@
 import React from 'react';
-import {render} from '@testing-library/react';
+import {render, cleanup} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import ContactLink from '../Info/Contact/ContactLink';
 import ProjectCard from '../Info/Project/ProjectCard';
+import ExperienceCard from '../Info/Experience/ExperienceCard';
+import Card from '../Info/Card';
 
 // mock data
 class MockData {
@@ -11,6 +13,11 @@ class MockData {
         link: 'https://mock-link.com',
         text: 'mock-link',
         icon: 'fa-mock'
+    }
+
+    static mockCardData = {
+        title: 'sampleCardTitle',
+        content: '<div>samplecontent</div>'
     }
 
     static mockProjectCardData = {
@@ -24,7 +31,26 @@ class MockData {
         ],
         repoLink: 'https://github.com/TestUser/TestRepo'
     }
+
+    static mockExperienceCardData = {
+        company: 'sampleCorporation',
+        position: 'tester',
+        imageURL: '/corporation-logo.png',
+        imageALT: 'corporation logo',
+        technology: [
+            'tech1',
+            'tech2'
+        ],
+        description: [
+            'information1',
+            'information2',
+            'information3'
+        ]
+    }
 }
+
+// cleanup after each test
+afterEach(cleanup);
 
 // tests
 test('<ContackLink /> test', () => {
@@ -53,6 +79,23 @@ test('<ContackLink /> test', () => {
     expect(children[1].childNodes.length).toBe(1);
     expect(children[1].firstChild.classList.contains('fa')).toBe(true);
     expect(children[1].firstChild.classList.contains(mockData.icon)).toBe(true);
+});
+test('<Card /> test', () => {
+    // get the mock data
+    const mockData = MockData.mockCardData;
+
+    // arrange the component
+    const {container} = render(<Card {...mockData} />);
+
+    expect(container).toBeTruthy();
+
+    const title = container.querySelector('h4');
+    expect(title).toBeTruthy();
+    expect(title).toHaveTextContent(mockData.title);
+
+    const content = container.querySelector('.card-2 div');
+    expect(content).toBeTruthy();
+    expect(content).toHaveTextContent(mockData.content);
 });
 
 test('<ProjectCard /> test', () => {
@@ -93,4 +136,45 @@ test('<ProjectCard /> test', () => {
     expect(content[5]).toBeTruthy();
     expect(content[5]).toHaveClass('repo-link');
     expect(content[5]).toHaveAttribute('href', mockData.repoLink);
+});
+
+test('<ExperienceCard /> test', () => {
+    // get the mock data
+    const mockData = MockData.mockExperienceCardData;
+
+    // arrange the component
+    const {container} = render(<ExperienceCard {...mockData} />);
+
+    expect(container).toBeTruthy();
+    const title = container.querySelector('h4');
+    expect(title).toBeTruthy();
+    expect(title).toHaveTextContent(mockData.company);
+
+    const image = container.querySelector('.company-img');
+    expect(image).toBeTruthy();
+    expect(image).toHaveAttribute('src', process.env.PUBLIC_URL + mockData.imageURL);
+    expect(image).toHaveAttribute('alt', process.env.PUBLIC_URL + mockData.imageALT);
+
+    const details = container.querySelector('.exp-details');
+    expect(details).toBeTruthy();
+    expect(details).toHaveTextContent('Position ' + mockData.position);
+
+    const technologies = details.querySelector('.tags');
+    expect(technologies).toBeTruthy();
+    expect(technologies.childNodes.length).toBe(mockData.technology.length);
+    for (let i = 0; i < technologies.childNodes.length; i++)
+        expect(technologies.childNodes[i]).toHaveTextContent(mockData.technology[i]);
+    
+    const description = details.querySelector('.exp-description');
+    expect(description).toBeTruthy();
+
+    const descriptionTitle = description.querySelector('i');
+    expect(descriptionTitle).toBeTruthy();
+    expect(descriptionTitle).toHaveTextContent('Description');
+
+    const descriptionContent = description.querySelector('ul');
+    expect(descriptionContent).toBeTruthy();
+    expect(descriptionContent.childNodes.length).toBe(mockData.description.length);
+    for (let i = 0; i < descriptionContent.childNodes.length; i++)
+        expect(descriptionContent.childNodes[i]).toHaveTextContent(mockData.description[i]);
 });

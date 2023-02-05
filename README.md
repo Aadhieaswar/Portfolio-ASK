@@ -1,5 +1,7 @@
 # Portfolio React Web App - Aadhieaswar Senthil Kumar
 
+[![CI/CD](https://github.com/Aadhieaswar/Portfolio-ASK/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/Aadhieaswar/Portfolio-ASK/actions/workflows/ci.yml)
+
 ## ReactJS Web App
 
 ### Web App Contains:
