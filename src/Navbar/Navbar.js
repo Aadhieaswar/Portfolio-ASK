@@ -16,6 +16,10 @@ export default class Navbar extends Component {
                     Resume
                 </a>
                 <div className="ver-sep"></div>
+                <Link className="link-right" to="Experience" smooth={true} duration={300} offset={-100}>
+                    Experience
+                </Link>
+                <div className="ver-sep"></div>
                 <Link className="link-right" to="Projects" smooth={true} duration={300} offset={-100}>
                     Projects
                 </Link>

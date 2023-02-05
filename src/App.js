@@ -8,6 +8,7 @@ import Footer from './Layout/Footer';
 import AboutMe from './Info/AboutMe';
 import Projects from './Info/Project/Projects';
 import Contact from './Info/Contact/Contact';
+import Experience from './Info/Experience/Experience';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <div className="divider"></div>
       <main>
         <AboutMe />
+        <Experience />
         <Projects />
         <Contact />
       </main>

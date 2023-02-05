@@ -1,0 +1,42 @@
+.my-experience {
+    width: 95%;
+    margin: 10px auto;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.my-experience > h2 {
+    color: var(--primary);
+    font-weight: bold;
+    border-bottom: 1px solid var(--primary);
+    padding: 5px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.my-experience ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.company-img {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.exp-card {
+    color: var(--dark);
+}
+
+.exp-card i {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.exp-description li::before {
+    font-weight: bold;
+    content: "\2022    ";
+    color: var(--primary);
+}
