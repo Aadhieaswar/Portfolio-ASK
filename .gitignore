@@ -1,4 +1,3 @@
-
 # to ignore swp files created by vim
 *.swp
 *.swo
@@ -14,3 +13,6 @@ node_modules/*
 
 # build
 build/*
+
+# test coverage reports
+coverage/*

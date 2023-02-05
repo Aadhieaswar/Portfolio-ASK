@@ -27,7 +27,7 @@ export default class ProjectCard extends Component {
                 </div>
                 <hr />
                 <ul className="tags">
-                    {this.props.tags.map((item, index) => <li key={index}>{item}</li>)}
+                    {this.props.tags?.map((item, index) => <li key={index}>{item}</li>)}
                 </ul>
                 <a className="repo-link" href={this.props.repoLink}>Github Repo</a>
             </li>
